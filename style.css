@@ -3,7 +3,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-color: #fff;
+    background-color: #f4f4f4;
 
     display: flex;
     justify-content: center;
@@ -15,9 +15,16 @@
 .triangle-container{
     width: 600px;
     height: 600px;
-    background-color: #f4f4f4;
+    background-color: #b22f2f;
 
     position: relative;
+
+   
+   /* animation: triangleleftturn 3s ; */
+
+
+   transform: rotate(0deg);
+   transform-origin: 259px 203px;
 
 }
 
@@ -34,10 +41,17 @@
 }
 
 .triangle-left{
-    height: 200px;
+    height: 200px; 
+    /* height: 170px;  left under bottom */
 
-   left: 235px;
-   transform: rotate(40deg);
+    left: 235px;
+    transform: rotate(40deg);
+
+    transition: all 2s;
+
+    
+
+  
 }
 
 .triangle-right{
@@ -45,6 +59,13 @@
 
     right: 235px;
     transform: rotate(-40deg);
+
+    transition: all 2s;
+
+    /* animation:trianglerightside 3s   infinite; */
+
+    animation-delay: 1.5s;
+   
 }
 
 .triangle-bottom{
@@ -80,9 +101,12 @@
 
     transition: all 2s;
 
-    animation: ballonfirstfloor 3s linear infinite;
+    /* animation: ballonfirstfloor 3s linear infinite; */
 
 }
+
+
+
 
 @keyframes ballonfirstfloor {
     0%{
@@ -95,5 +119,56 @@
 
     }
 
+    100%{
+        transform: rotate(3turn);
+    }
+
   
 }
+
+
+
+@keyframes trianglerightside {
+    0%{
+        height: 200px;
+        right: 235px;   
+    }
+
+    50%{
+        height: 135px;
+        right: 218px;
+        top: 157px;
+
+    }
+
+    100%{
+        height: 200px;
+        right: 235px;
+    }
+}
+
+
+
+
+@keyframes triangleleftturn {
+   0%{
+    transform: rotate(0);
+    /* transform-origin: 259px 203px; */
+   }
+
+   50%{
+    transform: rotate(-140deg);
+    transform-origin: 259px 203px;
+   }
+
+   70%{
+    transform: rotate(0);
+   }
+
+}
+
+
+
+
+
+
