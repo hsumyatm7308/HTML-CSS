@@ -12,19 +12,16 @@
     /* position: relative; */
 }
 
+
+
+
 .triangle-container{
     width: 600px;
     height: 600px;
-    background-color: #b22f2f;
 
     position: relative;
 
-   
-   /* animation: triangleleftturn 3s ; */
-
-
-   transform: rotate(0deg);
-   transform-origin: 259px 203px;
+ 
 
 }
 
@@ -61,10 +58,10 @@
     transform: rotate(-40deg);
 
     transition: all 2s;
+    animation:trianglerightside 3s   infinite;
 
-    /* animation:trianglerightside 3s   infinite; */
 
-    animation-delay: 1.5s;
+    animation-delay: 1.2s;
    
 }
 
@@ -74,6 +71,10 @@
     top: 140px;
 
     transform: rotate(90deg);
+
+  
+
+
 }
 
 .triangle-bottom2{
@@ -95,13 +96,13 @@
     filter: drop-shadow(2px 2px 2px  #ddd);
 
     position: absolute;
-    left: 709px;
-    /* left: 795px; */
-    top: 275px;
+    left: 250px;
+    /* left: 334px; */
+    top: 193px;
 
     transition: all 2s;
 
-    /* animation: ballonfirstfloor 3s linear infinite; */
+    animation: ballonfirstfloor 3s linear infinite;
 
 }
 
@@ -114,13 +115,15 @@
      
     }
 
-    50%{
-     left: 795px;
+    25%{
+     left: 334px;
 
     }
 
+   
+
     100%{
-        transform: rotate(3turn);
+        transform: rotate(1turn);
     }
 
   
@@ -150,22 +153,8 @@
 
 
 
-@keyframes triangleleftturn {
-   0%{
-    transform: rotate(0);
-    /* transform-origin: 259px 203px; */
-   }
 
-   50%{
-    transform: rotate(-140deg);
-    transform-origin: 259px 203px;
-   }
 
-   70%{
-    transform: rotate(0);
-   }
-
-}
 
 
 
