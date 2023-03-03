@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hover</title>
-        <link rel="stylesheet" href="./style.css">
+        <title>Cube</title>
     </head>
+
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: #f4f4f4;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cube-face-1,.cube-top-1,.cube-side-1,.cube-bottom-1{
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+
+        }
+
+        .cube-face-1{
+            transform: matrix(0.586,0.8,-0.52,0.7,14.9,3.9);
+        }
+
+        .cube-top-1{
+            transform: matrix(0.586,0.8,-0.8,0,-21,-30);
+            
+        }
+
+        .cube-side-1{
+            
+            transform:scale(1.1) matrix(0.590,-0.8,0.52,0.7,-105,13);
+        }
+
+        .cube-bottom-1{
+            transform: matrix(0.586,-1,0.52,0.7,-115,10);
+        }
+
+    </style>
+
     <body>
         
         <div class="container">
-             
-                
-            <div class="triangle-container">
-                <div class="triangle-left"></div>
-                <div class="triangle-right"></div>
-                <div class="triangle-bottom"></div>
-                <div class="triangle-bottom2"></div>
-
-            <div class="ball"></div>
-
-    
-
-
-             </div>
+            <div class="cube-face-1"></div>
+            <div class="cube-top-1"></div>
+            <div class="cube-side-1"></div>
+            <!-- <div class="cube-bottom-1"></div> -->
+            
         </div>
-    </body>
 
+    </body>
 </html>
