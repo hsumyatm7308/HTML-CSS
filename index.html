@@ -29,27 +29,12 @@
             transition: all 3s;
 
             /* transform: rotate(15deg); */
-            animation: ctnani 3s linear infinite;
+            animation: containerani 3s linear infinite;
             
         }
 
        
 
-        @keyframes ctnani {
-            0%{
-                transform: rotate(0);
-            }
-
-            50%{
-                transform: rotate(15deg);
-            }
-
-            100%{
-                transform: rotate(0);
-
-            }
-          
-        }
 
         .cube-face-1,.cube-top-1,.cube-side-1,.cube-bottom-1,.water-surface{
             width: 100px;
@@ -69,7 +54,7 @@
 
             transition: all 3s;
 
-            animation: faceani 3s linear infinite;
+            animation: watersurface3 3s linear infinite;
         }
 
         .cube-side-1{
@@ -98,7 +83,7 @@
             
             /* transform: matrix(0.8,.1,0.8,0.3,-86,3); */
 
-            animation: surfaceoneani 3s linear infinite;
+            animation: watersurface 3s linear infinite;
 
         }
 
@@ -114,7 +99,7 @@
             transform: matrix(0.7,.1,0.65,-0.7,-70,56);
 
 
-            animation: surface2ani 3s linear infinite;
+            animation: watersurface2 3s linear infinite;
 
         
 
@@ -123,7 +108,24 @@
 
         }
 
-        @keyframes surfaceoneani{
+        
+        @keyframes containerani {
+            0%{
+                transform: rotate(0);
+            }
+
+            50%{
+                transform: rotate(15deg);
+            }
+
+            100%{
+                transform: rotate(0);
+
+            }
+          
+        }
+
+        @keyframes watersurface{
             0%{
                 transform: matrix(0.7,.09,0.8,0.4,-90,10);
 
@@ -140,7 +142,7 @@
             }
         }
       
-        @keyframes surface2ani{
+        @keyframes watersurface2{
             0%{
                 transform: matrix(0.7,.1,0.65,-0.7,-70,56);
 
@@ -162,7 +164,7 @@
 
         }
 
-        @keyframes faceani{
+        @keyframes watersurface3{
             0%{
                 background: linear-gradient(63deg,rgba(34, 197, 243, 0.5) 52%,#fff 30%);
 
