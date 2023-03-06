@@ -5,188 +5,151 @@
     </head>
 
     <style>
-        body{
-            width: 100vw;
-            height: 100vh;
+  .body-container {
+    width: 100vw;
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  margin-left: 10%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 3s;
+  transform: rotate(0deg);
+  animation: containerani 3s linear infinite;
+}
 
-        
+.cube-face-1,.cube-top-1,.cube-side-1,.cube-bottom-1,.water-surface {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+}
 
-        .container{
-            width: 400px;
-            height: 400px;
-            /* background-color: #f4f4f4; */
+.water-surface {
+  position: absolute;
+}
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+.cube-face-1 {
+  transform: matrix(0.7,-0.8,0.52,0.7,31,2);
+  background: linear-gradient(69deg,rgba(34, 197, 243, 0.5) 46%,transparent 30%);
+  transition: all 3s;
+  animation: watersurface3 3s linear infinite;
+}
 
-            transition: all 3s;
+.cube-side-1 {
+  transform: matrix(0.7,-0.8,0.52,0.7,-100,13);
+}
 
-            transform: rotate(0deg);
-            animation: containerani 3s linear infinite;
-            
-        }
+.cube-top-1 {
+  transform: matrix(0.7,.1,0.53,0.7,0.29,-30.5);
+}
 
-       
+.cube-bottom-1 {
+  transform: matrix(0.7,.1,0.53,0.7,-269,47);
+}
 
+.water-surface {
+  background: linear-gradient(rgba(34, 197, 243, 0.5),rgba(34, 197, 243, 1));
+  border: 1px solid rgba(34, 197, 243, 0.5);
+  transform: matrix(0.7,.09,0.8,0.4,-87,10);
+  animation: watersurface 3s linear infinite;
+}
 
-        .cube-face-1,.cube-top-1,.cube-side-1,.cube-bottom-1,.water-surface{
-            width: 100px;
-            height: 100px;
-            border: 2px solid #000;
+.water-surface2 {
+  width: 100px;
+  height: 71px;
+  background: linear-gradient(rgba(34, 197, 243, 0.5),rgba(34, 197, 243, 0.5));
+  border-top: 1px solid rgba(34, 197, 243, 0.5);
+  position: absolute;
+  transform: matrix(0.7,.1,0.65,-0.75,-69,56);
+  animation: watersurface2 3s linear infinite;
+}
 
-        }
+@keyframes containerani {
+  0% {
+    transform: rotate(0deg);
+  }
 
-        .water-surface{
-            position: absolute;
-        }
+  50% {
+    transform: rotate(15deg);
+  }
 
-        .cube-face-1{
-            transform: matrix(0.7,-0.8,0.52,0.7,31,2);
-            background: linear-gradient(69deg,rgba(34, 197, 243, 0.5) 46%,transparent 30%);
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
-            transition: all 3s;
+@keyframes watersurface {
+  0% {
+    transform: matrix(0.7,.09,0.8,0.4,-87,10);
+  }
 
-            animation: watersurface3 3s linear infinite;
-        }
+  50% {
+    transform: matrix(0.8,.1,0.8,0.3,-79,3);
+  }
 
-        .cube-side-1{
-            
-            transform: matrix(0.7,-0.8,0.52,0.7,-100,13);
-        }
+  100% {
+    transform: matrix(0.7,.09,0.8,0.4,-87,10);
+  }
+}
 
+@keyframes watersurface2 {
+  0% {
+    transform: matrix(0.7,.1,0.65,-0.75,-69,56);
+  }
 
-        .cube-top-1{
-            transform: matrix(0.7,.1,0.53,0.7,0.29,-30.5);
+  50% {
+    transform: matrix(0.71,.1,0.7,-0.78,-65,50);
+    width: 100px;
+    height: 80px;
+  }
 
-            
-        }
+  100% {
+    transform: matrix(0.7,.1,0.65,-0.75,-69,56);
+    width: 100px;
+    height: 71px;
+  }
+}
 
-       
-        .cube-bottom-1{
-            transform: matrix(0.7,.1,0.53,0.7,-269,47);
-                                                
-        }
+@keyframes watersurface3 {
+  0% {
+    background: linear-gradient(63deg,rgba(34, 197, 243, 0.5) 52.5%,transparent 30%);
+  }
 
-        .water-surface{
-            background:linear-gradient(rgba(34, 197, 243, 0.5),rgba(34, 197, 243, 1));
-            border: 1px solid rgba(34, 197, 243, 0.5);
-            transform: matrix(0.7,.09,0.8,0.4,-87,10);
+  50% {
+    background: linear-gradient(64.8deg,rgba(34, 197, 243, 0.5) 52.5%,transparent 30%);
+  }
 
-            animation: watersurface 3s linear infinite;
-
-        }
-
-        .water-surface2{
-            width: 100px;
-            height: 71px;
-
-            background: linear-gradient(rgba(34, 197, 243, 0.5),rgba(34, 197, 243, 0.5));
-            border-top: 1px solid rgba(34, 197, 243, 0.5);
-
-            position: absolute;
-
-            transform: matrix(0.7,.1,0.65,-0.75,-69,56);
-
-
-            animation: watersurface2 3s linear infinite;
-
-        
-        }
-
-        
-        @keyframes containerani {
-            0%{
-                transform: rotate(0deg);
-            }
-
-            50%{
-                transform: rotate(15deg);
-            }
-
-            100%{
-                transform: rotate(0deg);
-
-            }
-          
-        }
-
-        @keyframes watersurface{
-            0%{
-                transform: matrix(0.7,.09,0.8,0.4,-87,10);
-
-            }
-
-            50%{
-                transform: matrix(0.8,.1,0.8,0.3,-81,3);
-
-            }
-
-            100%{
-                transform: matrix(0.7,.09,0.8,0.4,-87,10);
-
-            }
-        }
-      
-        @keyframes watersurface2{
-            0%{
-                transform: matrix(0.7,.1,0.65,-0.75,-69,56);
-
-            }
-
-            50%{
-                transform: matrix(0.71,.1,0.7,-0.81,-65,50);
-
-                width: 100px;
-                height: 80px;
-
-            }
-
-            100%{
-                transform: matrix(0.7,.1,0.65,-0.75,-69,56);
-                width: 100px;
-                height: 71px;
-            }
-
-        }
-
-        @keyframes watersurface3{
-            0%{
-                background: linear-gradient(64.3deg,rgba(34, 197, 243, 0.5) 52%,transparent 30%);
-
-            }
-
-            50%{
-                background: linear-gradient(64.3deg,rgba(34, 197, 243, 0.5) 52%,transparent 30%);
-
-            }
-
-            100%{
-                background: linear-gradient(64.3deg,rgba(34, 197, 243, 0.5) 52%,transparent 30%);
-
-            }
-        }
+  100% {
+    background: linear-gradient(63deg,rgba(34, 197, 243, 0.5) 52.5%,transparent 30%);
+  }
+}
 
     </style>
 
     <body>
         
-        <div class="container">
-            
-                <div class="cube-face-1"></div>
-                <div class="cube-top-1"></div>
-                <div class="cube-side-1"></div>
-                <div class="cube-bottom-1"></div>
-            
-                <div class="water-surface"></div>
-                <div class="water-surface2"></div>
-
+        <div class="body-container">
+        
+            <div class="container">
+                
+                    <div class="cube-face-1"></div>
+                    <div class="cube-top-1"></div>
+                    <div class="cube-side-1"></div>
+                    <div class="cube-bottom-1"></div>
+                
+                    <div class="water-surface"></div>
+                    <div class="water-surface2"></div>
+    
+            </div>
+    
         </div>
 
         
