@@ -28,7 +28,7 @@
 
             transition: all 3s;
 
-            /* transform: rotate(15deg); */
+            transform: rotate(0deg);
             animation: containerani 3s linear infinite;
             
         }
@@ -49,8 +49,7 @@
 
         .cube-face-1{
             transform: matrix(0.7,-0.8,0.52,0.7,31,2);
-            background: linear-gradient(69deg,rgba(34, 197, 243, 0.5) 46%,#fff 30%);
-            /* background: linear-gradient(63deg,rgba(34, 197, 243, 0.5) 52%,#fff 30%); */
+            background: linear-gradient(69deg,rgba(34, 197, 243, 0.5) 46%,transparent 30%);
 
             transition: all 3s;
 
@@ -78,40 +77,33 @@
         .water-surface{
             background:linear-gradient(rgba(34, 197, 243, 0.5),rgba(34, 197, 243, 1));
             border: 1px solid rgba(34, 197, 243, 0.5);
-            transform: matrix(0.7,.09,0.8,0.4,-90,10);
-
-            
-            /* transform: matrix(0.8,.1,0.8,0.3,-86,3); */
+            transform: matrix(0.7,.09,0.8,0.4,-87,10);
 
             animation: watersurface 3s linear infinite;
 
         }
 
-        .water-surface1{
+        .water-surface2{
             width: 100px;
-            height: 76px;
+            height: 71px;
 
             background: linear-gradient(rgba(34, 197, 243, 0.5),rgba(34, 197, 243, 0.5));
             border-top: 1px solid rgba(34, 197, 243, 0.5);
 
             position: absolute;
 
-            transform: matrix(0.7,.1,0.65,-0.7,-70,56);
+            transform: matrix(0.7,.1,0.65,-0.75,-69,56);
 
 
             animation: watersurface2 3s linear infinite;
 
         
-
-
-        
-
         }
 
         
         @keyframes containerani {
             0%{
-                transform: rotate(0);
+                transform: rotate(0deg);
             }
 
             50%{
@@ -119,7 +111,7 @@
             }
 
             100%{
-                transform: rotate(0);
+                transform: rotate(0deg);
 
             }
           
@@ -127,56 +119,56 @@
 
         @keyframes watersurface{
             0%{
-                transform: matrix(0.7,.09,0.8,0.4,-90,10);
+                transform: matrix(0.7,.09,0.8,0.4,-87,10);
 
             }
 
             50%{
-                transform: matrix(0.8,.1,0.8,0.3,-86,3);
+                transform: matrix(0.8,.1,0.8,0.3,-81,3);
 
             }
 
             100%{
-                transform: matrix(0.7,.09,0.8,0.4,-90,10);
+                transform: matrix(0.7,.09,0.8,0.4,-87,10);
 
             }
         }
       
         @keyframes watersurface2{
             0%{
-                transform: matrix(0.7,.1,0.65,-0.7,-70,56);
+                transform: matrix(0.7,.1,0.65,-0.75,-69,56);
 
             }
 
             50%{
-                transform: matrix(0.73,.1,0.7,-0.75,-64,49);
+                transform: matrix(0.71,.1,0.7,-0.81,-65,50);
 
                 width: 100px;
-                height: 86px;
+                height: 80px;
 
             }
 
             100%{
-                transform: matrix(0.7,.1,0.65,-0.7,-70,56);
+                transform: matrix(0.7,.1,0.65,-0.75,-69,56);
                 width: 100px;
-                height: 76px;
+                height: 71px;
             }
 
         }
 
         @keyframes watersurface3{
             0%{
-                background: linear-gradient(63deg,rgba(34, 197, 243, 0.5) 52%,#fff 30%);
+                background: linear-gradient(64.3deg,rgba(34, 197, 243, 0.5) 52%,transparent 30%);
 
             }
 
             50%{
-            background: linear-gradient(63deg,rgba(34, 197, 243, 0.5) 52%,#fff 30%);
+                background: linear-gradient(64.3deg,rgba(34, 197, 243, 0.5) 52%,transparent 30%);
 
             }
 
             100%{
-                background: linear-gradient(63deg,rgba(34, 197, 243, 0.5) 52%,#fff 30%);
+                background: linear-gradient(64.3deg,rgba(34, 197, 243, 0.5) 52%,transparent 30%);
 
             }
         }
@@ -193,7 +185,7 @@
                 <div class="cube-bottom-1"></div>
             
                 <div class="water-surface"></div>
-                <div class="water-surface1"></div>
+                <div class="water-surface2"></div>
 
         </div>
 
